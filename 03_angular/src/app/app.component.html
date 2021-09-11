@@ -1,0 +1,28 @@
+<div class="site">
+  <form class="todo-form" (submit)="addTodo()">
+    <label for="todo-input" class="todo-form__label">What do you want to do?</label>
+    <input id="todo-input" type="text" class="todo-form__input" name="todo" required [(ngModel)]="todo">
+    <button type="submit" class="todo-form__submit btn">Add to list</button>
+  </form>
+
+  <main class="todo-section">
+    <ul class="todo-list">
+      <li class="todo-list__item" *ngFor="let todoItem of todos">
+        <label class="todo-list__label">
+          <input
+            type="checkbox"
+            class="todo-list__checkbox"
+            [(ngModel)]="todoItem.done"
+            (change)="saveState()">
+          <span
+            class="todo-list__description"
+            [class.todo-list__description--done]="todoItem.done"
+          >{{todoItem.description}}</span>
+        </label>
+        <button
+          class="todo-list__remove btn btn--danger"
+          (click)="removeItem(todoItem)">Remove</button>
+      </li>
+    </ul>
+  </main>
+</div>
