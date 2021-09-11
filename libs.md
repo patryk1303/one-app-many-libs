@@ -1,0 +1,11 @@
+1. Vanilla JS
+1. React https://pl.reactjs.org/
+1. Angular https://angular.io/
+1. Vue https://vuejs.org/
+1. Svelte https://svelte.dev/
+1. Lit https://lit.dev/
+1. Stencil https://stenciljs.com/
+1. Solid https://www.solidjs.com/
+1. Alpine https://alpinejs.dev/
+1. Mithril https://mithril.js.org/
+1. Tonic https://tonicframework.dev/
