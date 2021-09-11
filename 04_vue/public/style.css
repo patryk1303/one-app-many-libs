@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --atomic-tangerine: hsla(23, 100%, 65%, 1);
+  --bitter-lemon: hsla(71, 86%, 49%, 1);
+  --light-green: hsla(137, 83%, 76%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --ash-gray: hsla(135, 10%, 77%, 1);
+
+  --screen-tablet: 768px;
+
+  font-family: 'Glory', sans-serif;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--atomic-tangerine);
+}
+
+.site {
+  margin: 0 auto;
+  max-width: var(--screen-tablet);
+}
+
+.btn {
+  padding: 0.5rem;
+
+  color: var(--atomic-tangerine);
+
+  background-color: var(--light-green);
+  
+  border: 1px solid var(--ash-gray);
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--bitter-lemon);
+}
+.btn:active {
+  background-color: var(--ash-gray);
+}
+.btn--danger {
+  background-color: brown;
+  color: var(--white);
+}
+.btn--danger:hover,
+.btn--danger:active {
+  color: var(--atomic-tangerine);
+}
+
+.todo-form {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid var(--white);
+}
+.todo-form__label {
+  width: 100%;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+  font-weight: bold;
+}
+.todo-form__input {
+  flex-grow: 1;
+
+  padding: 0.5rem;
+
+  border: 1px solid var(--light-green);
+  border-right: 0;
+  border-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+
+  background-color: var(--ash-gray);
+}
+.todo-form__input:focus {
+  outline: none;
+
+  border: 1px solid var(--bitter-lemon);
+  border-right: 0;
+}
+.todo-form__submit {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  border-left: 0;
+}
+
+.todo-list {
+  list-style: none;
+}
+.todo-list__item {
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 0;
+}
+.todo-list__label {
+  flex-grow: 1;
+}
+.todo-list__description {
+  font-size: 1.5rem;
+}
+.todo-list__description--done {
+  color: var(--ash-gray);
+  text-decoration: line-through;
+}
